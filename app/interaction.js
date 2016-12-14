@@ -341,7 +341,7 @@ $(document).ready(function(){
 	};
 	
 	$(".menugithub").click(function(){
-		window.open("http://www.github.com");
+		window.open("https://www.github.com");
 	});
 
 	$(document).on("click","#viewcasestudy",function(e){

@@ -197,7 +197,7 @@
         if (!Ma) {
             var c = !1,
                 b = !1;
-            "undefined" === typeof ca.Chart.creditHref ? (a.creditHref = "http://canvasjs.com/",
+            "undefined" === typeof ca.Chart.creditHref ? (a.creditHref = "https://canvasjs.com/",
                 a.creditText = "CanvasJS.com") : (c = a.updateOption("creditText"), b = a.updateOption("creditHref"));
             if (a.creditHref && a.creditText) {
                 a._creditLink || (a._creditLink = document.createElement("a"), a._creditLink.setAttribute("class", "canvasjs-chart-credit"), a._creditLink.setAttribute("style", "outline:none;margin:0px;position:absolute;right:2px;top:" + (a.height - 14) + "px;color:dimgrey;text-decoration:none;font-size:11px;font-family: Calibri, Lucida Grande, Lucida Sans Unicode, Arial, sans-serif"), a._creditLink.setAttribute("tabIndex", -1), a._creditLink.setAttribute("target", "_blank"));
