@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/afhaque/PhotographyRater.git"
+    "url": "git+https://github.com/afhaque/colormebyiris.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/afhaque/PhotographyRater/issues"
+    "url": "https://github.com/afhaque/colormebyiris/issues"
   },
-  "homepage": "https://github.com/afhaque/PhotographyRater#readme"
+  "homepage": "https://github.com/afhaque/colormebyiris#readme"
 }
