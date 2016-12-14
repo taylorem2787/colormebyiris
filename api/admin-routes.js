@@ -18,7 +18,6 @@ module.exports = function(app){
 		});
 	});
 
-
 	//Reset alluser table to default value of 0 for each color
 	function resetMemberColors(){
 		var queryString = `UPDATE allusers SET red=130, green=130, blue=130, bwCount=0, upvotes=0`;

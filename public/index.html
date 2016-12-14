@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-<title>colorme by iris</title>
-<script
-  src="https://code.jquery.com/jquery-3.1.1.js"
-  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-  crossorigin="anonymous"></script>
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- Import Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/e91c0db7-34f2-4c51-b62e-57fe536575ad.css">
-<link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/e91c0db7-34f2-4c51-b62e-57fe536575ad.css"/>
-<!--Let browser know website is optimized for mobile-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">        
-<!-- STYLE SHEETS -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-<!-- JQuery Web Pop-over -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css">
-<script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
-<!-- CanvasJS CDN -->
-<script src="../app/canvas.js"></script>
-<!-- JS files -->
-<!-- <script src="../app/app.js"></script>   -->
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>colorme by iris</title>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous"></script>
+        <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/e91c0db7-34f2-4c51-b62e-57fe536575ad.css">
+    <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/e91c0db7-34f2-4c51-b62e-57fe536575ad.css"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">        
+    <!-- STYLE SHEETS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!-- JQuery Web Pop-over -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css">
+    <script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
+    <!-- CanvasJS CDN -->
+    <script src="../app/canvas.js"></script>
+    <!-- JS files -->
+    <!-- <script src="../app/app.js"></script>   -->
 </head>
 
 <body class="">
@@ -41,42 +45,44 @@
             </div>
         </div>
     </div> -->
-
+<!-- ================================INTRO============================= -->
     <section id="intro">
         <div id="color"><span>Color</span></div>
         <div id="calibration"><span>Calibration</span></div>
         <div id="logo">
-        <div class="row">
-            <div class="col s12 m6 l12 center-align">
-               <img src="img/colormelogo.svg" alt="logo"> 
-            </div>
+            <div class="row">
+                <div class="col s12 m6 l12 center-align">
+                   <img src="img/logo_small.svg" alt="Logo"> 
+                </div>
+            </div> 
         </div>
-        
+        <!-- Particles Section -->
+        <div id="particles-js" ">
+            <canvas  width="900" height="1000" style="width: 100%; height: 100%;"></canvas>
         </div>
-
-            <!-- Particles Section -->
-    <div id="particles-js" "><canvas  width="900" height="1000" style="width: 100%; height: 50%;"></canvas></div>
     </section>
+<!-- ==================================NAV============================ -->
 
     <div id="openmenu"></div>
     <nav>
         <div class="menu menuexplore"><span class="number">01</span><span class="label">Explore</span></div>
         <div class="menu menuprofile"><span class="number">02</span><span class="label">profile</span></div>
-        <div id="logosmall"><img class="clickable-link" src="img/colormelogo.svg" width="70" height="70" alt="Logo colorme"></div>
+        <div id="logosmall"><img class="logo-img" src="img/logo_small.svg" width="70" height="70" alt="Logo colorme"></div>
         <div id="close"></div>
-        <div class="menu menugithub"><span class="number">03</span><span class="label">github</span></div>
-        <div class="menu menulogin"><span class="number">04</span><span class="label">login</span></div>
+        <div class="menu menugithub" id="login" href="collapsible.html"><span class="number">03</span><span class="label">Log In</span></div>
+
+        <div class="menu menulogin"><span class="number">04</span><span class="label">Register</span></div>
     </nav>
-    
+ <!-- ==================================MAIN============================ -->   
     <div id="grid_bg"></div>
     <section id="grid" class="center-align black">                
-        <div class="content center-align" style="top: 28%">
+        <div class="content-grid center-align">
             <div class="row center-align">
                 <div class="col s12 m6 l12 center-align">
 
                     <!-- MAIN INTO START -->
                     <div class="container-main white center-align" id="main">
-                        <div class="card-content black-text" >
+                        <div class="card-content black-text">
                             <div class="row">
                                 <div class="col s12 m6 l12">
                                     <h2 class="header"><b>color</b>me by iris</h2>
@@ -84,16 +90,15 @@
                                     <p class="grey-text text-darken-3 lighten-3">What color are you feeling at the moment? Discover on colorme, a photo browser whose color evolves with you!<br>As you browse photos, click on a thumbs up or thumbs down icon to rate a photo. colorme continually calibrates its color based on your color preference. Is colorme a mood ring app? Does it reflect your unconscious color attractions? Click on EXPLORE to find out!</p>
                                     <div class="row center-align">
                                         <div class="col s12 m6 l12">
-                                            <div class="waves-effect waves-light btn-large color-window explore-button"><i class="material-icons left">visibility</i>Explore</div>
+                                            <div class="waves-effect waves-light btn-large color-window explore-button" id="explore-button"><i class="material-icons left">visibility</i>Explore</div>
                                         </div>
                                     </div> <!-- EXPLORE BUTTON END -->
                                 </div>
                             </div>
-
                         </div> <!-- CARD CONTENT END -->
-                    </div> <!-- MAIN INTRO END -->
-                    <br>
-<!--============================= EXPLORE AREA ============================= -->
+                    </div><br> <!-- MAIN INTRO END -->
+                    
+<!--============================ EXPLORE AREA============================== -->
 
                     <div class="center-align" id="explore-display-top">
                         <div class="row center-align">
@@ -107,31 +112,34 @@
                             </div>
                         </div><br>
                     </div> <!-- EXPLORE-TOP END -->
+                    <div id="backtotop">
+                        <svg version="1.1" id="Calque_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 46 46" enable-background="new 0 0 46 46" xml:space="preserve">
+                        <polygon fill="#010202" points="31.041,24.704 22.821,16.483 22.821,16.484 22.82,16.483 14.601,24.703 17.163,27.267 22.82,21.609 
+                        28.478,27.267 "></polygon>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div> <!-- CONTENT END -->
     </section>
     
-<!--     <div id="projet_bg"></div>
-    <div class="previous"><div class="previous_bg"></div><span>Previous</span></div>
-    <div class="next"><div class="next_bg"></div><span>Next</span></div>
-    <section id="projet">
-    </section> -->
  <!--============================= PROFILE AREA ============================= -->
    
-    <div class="profile-holder"></div>
-    <section id="profile-main" class="pfix black">
-        <div id="profile_info">
-            <div class="image"><img src="img/peacock.jpg"></div>
-            <span class="a">P</span><span class="b">R</span>
-            <span class="o">O</span><span class="u">F</span>
-            <span class="t">I</span><span class="underscore"></span>
+    <div class="profile-holder transparent"></div>
+    <section id="profile-main" class="pfix white">
+        <div id="profile_info" class="purple">
+            <div class="image"><img src="img/ocean.jpg"></div>
+            <span class="p">P</span><span class="r">R</span>
+            <span class="o">O</span><span class="f">F</span>
+            <span class="i">I</span><span class="l">L</span>
+            <span class="e">E</span><span class="underscore">_</span>
         </div>
         
         <div id="city_grid" class="black">
             <div class="row">
                 <div class="col s12 m6 l12">
-                    <div class="container-profile black" id="profile-display-top"> 
+                <br><br>
+                    <div class="container-profile color-window" id="profile-display-top"> 
                         <div class="row">
                             <div class="col s12 m6 l12">
                                 <!-- Profile Page -->
@@ -141,17 +149,49 @@
                                             <div id="profile-display"></div>
                                         </div>
                                     </div>
-                                </div> <!-- PROFILE END -->
+                                </div> <!-- COLOR-WINDOW END -->
                             </div>
                         </div>
-                    </div> <!-- COL END -->
-                </div> <!-- ROW END -->
-            </div> <!-- END CONTAINER PROFILE -->
-        </div> <!-- END CITY GRID -->
-        <div class="perspective" style="width: 90%; border:4px double bisque; margin: auto;">
-            <div id='settings' class="settings-display">
-                <div class="row">
-                    <div class="col s12 m6 l12">
+                    </div> <!-- END CONTAINER PROFILE -->
+                    
+                    <div class="row center-align">
+                        <div class="col s12 m6 l12 center-align">
+                            <div id='settings' class="settings-display">
+                                <div class="row">
+                                    <div class="col s12 m6 l12">
+                                        <div id="settingscard" class="center-align"></div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div id='settings2' class="settings-display">
+                                <div class="row">
+                                    <div class="col s12 m6 l12">
+                                        <div id="settingscard2" class="center-align">
+                                            <br>
+                                        <a id='resetBtn' class="waves-effect waves-light btn"><i class="material-icons left">cached</i>Reset Colors</a><br><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="color-profile-slider">
+                                <div class="row">
+                                    <div class="col s12 m6 l12">
+                                        <h2 id="slider-text">Set photo color range</h2>
+                                        <input id="slider" type="range" min="10" max="50" value="30" step="5"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                      
+        </div>
+
+
+<!--         <div class="perspective">
+            <div class="row">
+                <div class="col s12 m6 l12">
+                    <div id='settings' class="settings-display">
                         <div id="settingscard" class="center-align"></div>
                     </div>
                 </div>
@@ -172,14 +212,64 @@
                     </div>
                 </div>
             </div> 
-        </div> <!-- PERSPECTIVE END -->
+        </div>  -->
+        <div id="backtotop">
+            <svg version="1.1" id="Calque_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 46 46" enable-background="new 0 0 46 46" xml:space="preserve">
+            <polygon fill="#010202" points="31.041,24.704 22.821,16.483 22.821,16.484 22.82,16.483 14.601,24.703 17.163,27.267 22.82,21.609 
+                28.478,27.267 "></polygon>
+            </svg>
+        </div>
+
     </section>
-<!--============================= LOG IN AREA ============================= -->
+<!-- ============================ LOG IN POPUP ========================= -->
+    <div class="webui-popover-content center-align">
+    <div class="col s12 m6 l12" id="login-form">
+        <div class="card-panel center-align transparent">
+        <form class="login-form" onsubmit="return false">
+            <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">person outline</i>
+                <input class="validate" id="email" type="email">
+                <label for="email" data-error="wrong" data-success="right">Email</label>
+            </div>
+            </div>
+            <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">lock outline</i>
+                <input id="password" type="password">
+                <label for="password">Password</label>
+            </div>
+            </div>
+            <div class="row">          
+            <div class="input-field col s12 left-align">
+                <input type="checkbox" id="remember-me" />
+                <label for="remember-me">Remember me</label>
+            </div>
+            </div><br>
+            <div class="row">
+            <div class="input-field col s12 white-text center-align">
+                <a type="submit" id="submitBtn" class="btn waves-effect waves-light teal accent-2" href="#explore-display-top">Sign In</a>
+            </div>
+            </div>
+            <div class="row">
+            <div class="input-field col s12">
+                <p class="medium-small"><a href="#"><small>Forgot password?</small></a></p>
+            </div>          
+            </div>
+        </form>
+        </div>
+    </div>
+    </div>
+<!-- ============================ LOG IN AREA ======================= -->
    
-    <section id="login" class="pfix">
+    <section id="login-main" class="pfix">
         <div id="login_info">
-            <div class="image"><img src="img/jellyfish.jpeg" alt="fond login"></div>
-            <span class="contactC">C</span><span class="contactO">O</span><span class="contactN">L</span><span class="contactT">O</span><span class="contactA"></span><span class="contactCC">R</span><span class="contactTT">_</span><span class="contactM">M</span><span class="contactE">E</span>
+            <div class="image"><img src="img/jellyfish.jpeg" alt=" login"></div>
+            <span class="c">C</span><span class="o2">O</span>
+            <span class="l2">L</span><span class="o3">O</span>
+            <span class="r2">R</span><span class="i2">I</span>
+            <span class="r3">R</span><span class="i3">I</span>
+            <span class="s">S</span>
         </div>
          <!-- <div id="form"> -->
         <div class="container-login">
@@ -187,8 +277,8 @@
                 <div class="col s12 m6 l12">
                     <div id="form"> 
                         <!-- <br><br><br><br> -->
-                        <div id="login-form">
-                        <div class="col s12 m6 l6" id="login-form">
+                        <!-- <div id="register-border"> -->
+                        <div class="col s12 m6 l6" id="register-border">
                             <h4 class="center-align">LOG IN</h4>
                             <br>
                             <div class="card-panel center-align transparent">
@@ -208,14 +298,14 @@
                                 </div>
                                 </div>
                                 <div class="row">          
-                                <div class="input-field col s12 m6 l12 login-text">
+                                <div class="input-field col s12 m6 l12 left-align">
                                     <input type="checkbox" id="remember-me" />
                                     <label for="remember-me">Remember me</label>
                                 </div>
                                 </div><br>
                                 <div class="row">
-                                <div class="input-field col s12 m6 l12 white-text center-align">
-                                    <a type="submit" id="submitBtn" class="btn waves-effect waves-light teal accent-2" href="#explore-display-top">Sign In</a>
+                                <div class="input-field col s12 m6 l12 center-align">
+                                    <a type="submit" id="submitBtn" class="btn waves-effect waves-light teal accent-2 white-text" href="#explore-display-top">Sign In</a>
                                 </div>
                                 </div>
                                 <div class="row">
@@ -226,7 +316,7 @@
                             </form>
                             </div>
                         </div>
-                        </div>
+                      <!--   </div> -->
                 
                         <div class="modal-content">
                         <div class="col s12 m6 l6">
@@ -257,7 +347,7 @@
                                     </div>
                                     <!-- <br><br><br><br> -->
                                     <div class="row">
-                                    <div class="col s12 m6 center-align">
+                                    <div class="col s12 m6 l12 center-align">
                                         <button type="submit" id="registerBtn" class="btn waves-effect waves-light teal accent-2" name="action">Sign Up<i class="fa fa-sign-in"></i></button>
                                     </div>     
                                     </div> 
@@ -287,7 +377,7 @@
                 <!-- <span>© 2016 Team Iris</span> -->
                 <!-- Brands mentionned above are property of their respective owner.<br>
                 Coded by <a href="http://www.nicolastarier.com" target="_blank">Nicolas Tarier</a> -->
-                    <ul>
+                    <ul class="left-align">
                       <li><span><a class="grey-text text-lighten-3" href="https://github.com/tatianaalcocer">Tatiana Alcocer</a>&nbsp | &nbsp
                       <a class="grey-text text-lighten-3" href="https://github.com/taylorem2787">Taylor Emolo</a></span></li>
                       <li><span><a class="grey-text text-lighten-3" href="https://github.com/kulini">Han Lee</a>&nbsp | &nbsp
@@ -298,7 +388,9 @@
         </div>
     </footer>
 <script src="../app/app.js"></script>
+<script type="text/javascript" src="../app/app.js"></script>
 <script src="../app/app2.js"></script>
+<script type="text/javascript" src="../app/app2.js"></script>
 <script src="../app/main.min.js"></script>
 <script src="../app/interaction.js"></script>
 <script src="../app/app-settings.js"></script>     
@@ -313,6 +405,7 @@ particlesJS('particles-js', {
         size: 5.5,
         size_random: true,
         nb: 100,
+
         line_linked: {
             enable_auto: true,
             distance: 340,
@@ -328,8 +421,8 @@ particlesJS('particles-js', {
         anim: {
             enable: true,
             speed: 2.5
-        }
-    },
+            }
+        },
     interactivity: {
         enable: true,
         mouse: {
@@ -340,6 +433,7 @@ particlesJS('particles-js', {
     },
     retina_detect: true
 });
+
 </script>
 
 <div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">320</span> x <span class="tooltipHeight" id="winHeight">367</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">320</span> x <span class="tooltipHeight" id="vpHeight">367</span></div>

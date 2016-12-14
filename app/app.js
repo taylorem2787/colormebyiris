@@ -9,7 +9,6 @@
 		]
 	};
 
-
 //PARALLAX=======================================================================
 $(document).ready(function(){
 
@@ -44,9 +43,27 @@ $('.registration-modal').modal({
 	}
 ); //END MODAL
 
-$('.registration-modal').on('click', function() {
-	$('#login').webuiPopover('hide');
+// $('.registration-modal').on('click', function() {
+// 	$('#login').webuiPopover('hide');
+// })
+
+$('.menugithub').on('click', function() {
+	$('#login').webuiPopover('show');
+	console.log(clicked);
 })
+
+//hide & show divs on click
+$(function(){
+    $("#explore-display-top").hide();
+    $(".load-more").hide();
+
+    $('.explore-button').on('click', function(){
+        $('#explore-display-top').show();
+        $('.load-more').show();
+        console.log('clicked');
+    });
+
+}); //show function end
 
 // Closing login modal and hiding main-intro card when logged in
 $('#submitBtn').on('click', function() {

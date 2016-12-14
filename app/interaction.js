@@ -4,17 +4,18 @@ $(document).ready(function(){
 	
 	var section = "home";
 	var isScrolling, isOpening = false;
+	var isOpening = false;
 	var projetouvert = false;
 	var position, op, scrollto, screencount, numprojet = 0;
 	var hgrid = 2000;
 	var lastClass;
-	// var projectsList = ["maram", "zoo", "cgi", "antoinelestage", "tokkun", "soulofthedeadtree", "pmmt", "dixon", "artspire", "departementevenement", "lerecyclagepasapas", "inlogia", "witchatt", "antro", "origami", "legrandbal"];
+
 	
-	$.fn.isOnScreen = function(){
-		var element = this.get(0);
-		var bounds = element.getBoundingClientRect();
-		return bounds.top < window.innerHeight-300 && bounds.bottom > 0;
-	}
+	// $.fn.isOnScreen = function(){
+	// 	var element = this.get(0);
+	// 	var bounds = element.getBoundingClientRect();
+	// 	return bounds.top < window.innerHeight-300 && bounds.bottom > 0;
+	// }
 	
 	$(window).scroll(function (event) {
 		var scrollP = $(window).scrollTop();
@@ -23,8 +24,8 @@ $(document).ready(function(){
 		$(".previous, .next").css('top', position);
 		$(".previous").css('margin-left', position);
 		$(".next").css('margin-right', position);
-		$("#projet").css('top', position/2);
-		$("#projet_intro").css('opacity', op);
+		// $("#projet").css('top', position/2);
+		// $("#projet_intro").css('opacity', op);
 		if (isOpening == true ) {
 			event.preventDefault();
 		}
@@ -72,24 +73,24 @@ $(document).ready(function(){
 			    }
 			}
 
-			if (section == "projet") {
-				screencount = $('#screenshots').children().size();
-				for (var sc = 1; sc<=screencount; sc++) {
-					if ( $("#screen" + sc).isOnScreen() ) {
-						$("#screen" + sc).addClass("display");
-					}
-				}
-			}
-			if (section == "profile-main") {
-				if (scrollP < 700 && ($(window).width() >= 960)) { $('#profile-main .image img').css("marginTop", -scrollP/2) }
-				for (var cc = 1; cc<=4; cc++) {
-					if ( $(".city" + cc).isOnScreen() ) {
-						$(".city" + cc).addClass("display");
-					}
-				}
-			}
-			if (section == "login") {
-				if (scrollP < 700 && ($(window).width() >= 960)) { $('#login .image img').css("marginTop", -scrollP/2) }
+			// if (section == "projet") {
+			// 	screencount = $('#screenshots').children().size();
+			// 	for (var sc = 1; sc<=screencount; sc++) {
+			// 		if ( $("#screen" + sc).isOnScreen() ) {
+			// 			$("#screen" + sc).addClass("display");
+			// 		}
+			// 	}
+			// }
+			// if (section == "profile-main") {
+			// 	if (scrollP < 700 && ($(window).width() >= 960)) { $('#profile-main .image img').css("marginTop", -scrollP/2) }
+			// 	for (var cc = 1; cc<=4; cc++) {
+			// 		if ( $(".city" + cc).isOnScreen() ) {
+			// 			$(".city" + cc).addClass("display");
+			// 		}
+			// 	}
+			// }
+			if (section == "login-main") {
+				if (scrollP < 700 && ($(window).width() >= 960)) { $('#login-main .image img').css("marginTop", -scrollP/2) }
 			}
 		}
 	});
@@ -111,128 +112,128 @@ $(document).ready(function(){
 		$("#grid").css("height", hgrid);
 	}
 
-	$(".item").mouseover(function(){
-		if (isOpening == false) {
-			if ($("#grid_bg").hasClass("fx")) { $("#grid_bg").attr("class", "fx"); }
-			else { $("#grid_bg").attr("class", ""); }
-			lastClass = $(this).attr('class').split(' ').pop();
-			$("#grid_bg").addClass(lastClass);
-		}
-	});
+	// $(".item").mouseover(function(){
+	// 	if (isOpening == false) {
+	// 		if ($("#grid_bg").hasClass("fx")) { $("#grid_bg").attr("class", "fx"); }
+	// 		else { $("#grid_bg").attr("class", ""); }
+	// 		lastClass = $(this).attr('class').split(' ').pop();
+	// 		$("#grid_bg").addClass(lastClass);
+	// 	}
+	// });
 	
-	$(".item").click(function(){
-		if (isOpening == false) {
-			if (section == "home") {
-				if ($(window).scrollTop() < $(window).height()) {
-					$("html, body").animate( { scrollTop: $(window).height() }, 500 );
-					$("nav").addClass("navtop");
-				}
-			}
-			lastClass = $(this).attr('class').split(' ').pop();
-			project(lastClass);
-			console.log(lastClass);
-			isOpening = isScrolling = projetouvert = true;
-			section = "";
-			setTimeout(function(){  
-				$("#grid").addClass("fade"); 
-				if ($(window).width() >= 960) {  
-					$("nav").addClass("enter");
-				} 
-			}, 500);
-		}
-	});
+	// $(".item").click(function(){
+	// 	if (isOpening == false) {
+	// 		if (section == "home") {
+	// 			if ($(window).scrollTop() < $(window).height()) {
+	// 				$("html, body").animate( { scrollTop: $(window).height() }, 500 );
+	// 				$("nav").addClass("navtop");
+	// 			}
+	// 		}
+	// 		lastClass = $(this).attr('class').split(' ').pop();
+	// 		project(lastClass);
+	// 		console.log(lastClass);
+	// 		isOpening = isScrolling = projetouvert = true;
+	// 		section = "";
+	// 		setTimeout(function(){  
+	// 			$("#grid").addClass("fade"); 
+	// 			if ($(window).width() >= 960) {  
+	// 				$("nav").addClass("enter");
+	// 			} 
+	// 		}, 500);
+	// 	}
+	// });
 
-	function project(projectname) {
-		setTimeout(function(){ 
-			$("body, .previous, .next").addClass(projectname); 
-			$("#projet").load("/projets/"+projectname+".html", function(){ console.log("ok"); openprojet() }); 
-		}, 1000);
-	}
+	// function project(projectname) {
+	// 	setTimeout(function(){ 
+	// 		$("body, .previous, .next").addClass(projectname); 
+	// 		$("#projet").load("/projets/"+projectname+".html", function(){ console.log("ok"); openprojet() }); 
+	// 	}, 1000);
+	// }
 
-	function openprojet() {
-		setTimeout(function(){  $("nav").addClass("navtop"); }, 400);
-		setTimeout(function(){ 
-			$(window).scrollTop(0);
-			$("body").addClass("projet"); 
-			$("body").addClass("nav");
-			isScrolling = false;
-			section = "projet";
-		}, 1000);
-		setTimeout(function(){ isOpening = false; }, 2000);
-	};
+	// function openprojet() {
+	// 	setTimeout(function(){  $("nav").addClass("navtop"); }, 400);
+	// 	setTimeout(function(){ 
+	// 		$(window).scrollTop(0);
+	// 		$("body").addClass("projet"); 
+	// 		$("body").addClass("nav");
+	// 		isScrolling = false;
+	// 		section = "projet";
+	// 	}, 1000);
+	// 	setTimeout(function(){ isOpening = false; }, 2000);
+	// };
 	
-	$(".previous").click(function(){
-		if (isOpening == false) {
-			$("html, body").animate( { scrollTop: 0 }, 800 );
-			isOpening = isScrolling = true;
-			$("#projet_intro, #projet_content").addClass("transition");
-			setTimeout(function(){ $("body").removeClass("projet"); }, 800);
-			lastClass = $(this).attr('class').split(' ').pop();
-			$(this).addClass("transition");
-			for (var i = 0; i < projectsList.length; i++) { 
-			    if (lastClass == projectsList[i]) {
-			    	console.log(i);
-			    	if (i == 0) { 
-			    		setTimeout(function(){  
-				    		$("body").attr("class", "projet nav "+projectsList[15]);
-				    		$(".previous").attr("class", "previous transition "+projectsList[15]);
-				    		$(".next").attr("class", "next "+projectsList[15]);
-				    		$("#projet").load("/projets/"+projectsList[15]+".html", function(){ console.log("ok"); openprojet() }); 
-			    		}, 2000);
-			    	} 
-			    	else { 
-			    		numprojet = i-1; 
-			    		setTimeout(function(){  
-			    			$("body").attr("class", "projet nav "+projectsList[numprojet]); 
-			    			$(".previous").attr("class", "previous transition "+projectsList[numprojet]);
-			    			$(".next").attr("class", "next "+projectsList[numprojet]);
-			    			$("#projet").load("/projets/"+projectsList[numprojet]+".html", function(){ console.log("ok"); openprojet() }); 
-			    		}, 2000);
-			    	}	
-			    }
-			}
-			setTimeout(function(){ $(".previous, #projet_intro, #projet_content").removeClass("transition");  }, 2000);
-			setTimeout(function(){ isOpening = isScrolling = false; }, 2800);
-		}
-	});
+	// $(".previous").click(function(){
+	// 	if (isOpening == false) {
+	// 		$("html, body").animate( { scrollTop: 0 }, 800 );
+	// 		isOpening = isScrolling = true;
+	// 		$("#projet_intro, #projet_content").addClass("transition");
+	// 		setTimeout(function(){ $("body").removeClass("projet"); }, 800);
+	// 		lastClass = $(this).attr('class').split(' ').pop();
+	// 		$(this).addClass("transition");
+	// 		for (var i = 0; i < projectsList.length; i++) { 
+	// 		    if (lastClass == projectsList[i]) {
+	// 		    	console.log(i);
+	// 		    	if (i == 0) { 
+	// 		    		setTimeout(function(){  
+	// 			    		$("body").attr("class", "projet nav "+projectsList[15]);
+	// 			    		$(".previous").attr("class", "previous transition "+projectsList[15]);
+	// 			    		$(".next").attr("class", "next "+projectsList[15]);
+	// 			    		$("#projet").load("/projets/"+projectsList[15]+".html", function(){ console.log("ok"); openprojet() }); 
+	// 		    		}, 2000);
+	// 		    	} 
+	// 		    	else { 
+	// 		    		numprojet = i-1; 
+	// 		    		setTimeout(function(){  
+	// 		    			$("body").attr("class", "projet nav "+projectsList[numprojet]); 
+	// 		    			$(".previous").attr("class", "previous transition "+projectsList[numprojet]);
+	// 		    			$(".next").attr("class", "next "+projectsList[numprojet]);
+	// 		    			$("#projet").load("/projets/"+projectsList[numprojet]+".html", function(){ console.log("ok"); openprojet() }); 
+	// 		    		}, 2000);
+	// 		    	}	
+	// 		    }
+	// 		}
+	// 		setTimeout(function(){ $(".previous, #projet_intro, #projet_content").removeClass("transition");  }, 2000);
+	// 		setTimeout(function(){ isOpening = isScrolling = false; }, 2800);
+	// 	}
+	// });
 	
-	$(".next").click(function(){
-		if (isOpening == false) {
-			$("html, body").animate( { scrollTop: 0 }, 800 );
-			isOpening = isScrolling = true;
-			$("#projet_intro, #projet_content").addClass("transition");
-			setTimeout(function(){ $("body").removeClass("projet"); }, 800);
-			$(".previous").css( "zIndex", 5);
-			lastClass = $(this).attr('class').split(' ').pop();
-			$(this).addClass("transition");
-			for (var i = 0; i < projectsList.length; i++) { 
-			    if (lastClass == projectsList[i]) {
-			    	console.log(i);
-			    	if (i == 15) { 
-			    		setTimeout(function(){  
-				    		$("body").attr("class", "projet nav "+projectsList[0]);
-				    		$(".previous").attr("class", "previous "+projectsList[0]);
-				    		$(".next").attr("class", "next transition "+projectsList[0]);
-				    		$("#projet").load("/projets/"+projectsList[0]+".html", function(){ console.log("ok"); openprojet() }); 
-			    		}, 2000);
-			    	} 
-			    	else { 
-			    		numprojet = i+1; 
-			    		setTimeout(function(){  
-			    			$("body").attr("class", "projet nav "+projectsList[numprojet]); 
-			    			$(".previous").attr("class", "previous "+projectsList[numprojet]);
-			    			$(".next").attr("class", "next transition "+projectsList[numprojet]);
-			    			$("#projet").load("/projets/"+projectsList[numprojet]+".html", function(){ console.log("ok"); openprojet() }); 
-			    		}, 2000);
-			    	}	
-			    }
-			}
-			setTimeout(function(){ 
-				$(".next, #projet_intro, #projet_content").removeClass("transition"); 
-				$(".previous").css( "zIndex", 4); }, 2000);
-			setTimeout(function(){ isOpening = isScrolling = false; }, 2800);
-		}
-	});
+	// $(".next").click(function(){
+	// 	if (isOpening == false) {
+	// 		$("html, body").animate( { scrollTop: 0 }, 800 );
+	// 		isOpening = isScrolling = true;
+	// 		$("#projet_intro, #projet_content").addClass("transition");
+	// 		setTimeout(function(){ $("body").removeClass("projet"); }, 800);
+	// 		$(".previous").css( "zIndex", 5);
+	// 		lastClass = $(this).attr('class').split(' ').pop();
+	// 		$(this).addClass("transition");
+	// 		for (var i = 0; i < projectsList.length; i++) { 
+	// 		    if (lastClass == projectsList[i]) {
+	// 		    	console.log(i);
+	// 		    	if (i == 15) { 
+	// 		    		setTimeout(function(){  
+	// 			    		$("body").attr("class", "projet nav "+projectsList[0]);
+	// 			    		$(".previous").attr("class", "previous "+projectsList[0]);
+	// 			    		$(".next").attr("class", "next transition "+projectsList[0]);
+	// 			    		$("#projet").load("/projets/"+projectsList[0]+".html", function(){ console.log("ok"); openprojet() }); 
+	// 		    		}, 2000);
+	// 		    	} 
+	// 		    	else { 
+	// 		    		numprojet = i+1; 
+	// 		    		setTimeout(function(){  
+	// 		    			$("body").attr("class", "projet nav "+projectsList[numprojet]); 
+	// 		    			$(".previous").attr("class", "previous "+projectsList[numprojet]);
+	// 		    			$(".next").attr("class", "next transition "+projectsList[numprojet]);
+	// 		    			$("#projet").load("/projets/"+projectsList[numprojet]+".html", function(){ console.log("ok"); openprojet() }); 
+	// 		    		}, 2000);
+	// 		    	}	
+	// 		    }
+	// 		}
+	// 		setTimeout(function(){ 
+	// 			$(".next, #projet_intro, #projet_content").removeClass("transition"); 
+	// 			$(".previous").css( "zIndex", 4); }, 2000);
+	// 		setTimeout(function(){ isOpening = isScrolling = false; }, 2800);
+	// 	}
+	// });
 	
 	$("#logosmall, .menuexplore").click(function(){
 		closenav(); // mobile
@@ -248,7 +249,7 @@ $(document).ready(function(){
 			setTimeout(function(){ section = "home";isOpening = false; }, 3000);
 		}
 		if (section == "profile-main" && isOpening == false) { 
-			closeabout();
+			closeprofile();
 			$("#grid").removeClass("fade");
 			//$("html, body").animate( { scrollTop: 0 }, 500 ); 
 			if ($(this).hasClass("menuexplore")) { setTimeout(function(){ $(window).scrollTop($(window).height()); }, 1000); }
@@ -260,8 +261,8 @@ $(document).ready(function(){
 			};
 			setTimeout(function(){ section = "home";isOpening = false;}, 2000);
 		}
-		if (section == "login" && isOpening == false) {	
-			closecontact(); 
+		if (section == "login-main" && isOpening == false) {	
+			closelogin(); 
 			$("#grid").removeClass("fade");
 			//$("html, body").animate( { scrollTop: 0 }, 500 ); 
 			if ($(this).hasClass("menuexplore")) { setTimeout(function(){ $(window).scrollTop($(window).height()); }, 1000); }
@@ -309,7 +310,7 @@ $(document).ready(function(){
 		}, 3000);
 	}
 	
-	function closeabout() {
+	function closeprofile() {
 		isOpening = true;
 		$("body").removeClass("profile-main"); 
 		setTimeout(function(){ 
@@ -317,11 +318,11 @@ $(document).ready(function(){
 		}, 1000);
 	}
 	
-	function closecontact() {
+	function closelogin() {
 		isOpening = true;
-		$("body").removeClass("login"); 
+		$("body").removeClass("login-main"); 
 		setTimeout(function(){ 
-			$("#login").addClass("pfix");  
+			$("#login-main").addClass("pfix");  
 		}, 1000);
 	}
 
@@ -340,15 +341,20 @@ $(document).ready(function(){
 		}, 600);
 	};
 	
-	$(".menugithub").click(function(){
-		window.open("https://www.github.com");
-	});
+	// $(".menugithub").click(function(){
+	// 	window.open("https://www.github.com");
+	// });
 
-	$(document).on("click","#viewcasestudy",function(e){
-		scrollto = $("#screenshots").offset().top - $("#projet_content").offset().top + $("#projet_content").height();
-		console.log(scrollto);
-		$("html, body").animate( { scrollTop: $("#screenshots").offset().top - $(window).height()/2 }, 400 );
-	});
+// 	$('.menugithub').on('click', function() {
+// 	$('#login').webuiPopover('show');
+// 	console.log(clicked);
+// })
+
+	// $(document).on("click","#viewcasestudy",function(e){
+	// 	scrollto = $("#screenshots").offset().top - $("#projet_content").offset().top + $("#projet_content").height();
+	// 	console.log(scrollto);
+	// 	$("html, body").animate( { scrollTop: $("#screenshots").offset().top - $(window).height()/2 }, 400 );
+	// });
 
 	$(document).on("click","#backtotop",function(e){
 		$("html, body").animate( { scrollTop: 0 }, 600 );
@@ -359,9 +365,9 @@ $(document).ready(function(){
 			isOpening = true;
 			closenav(); // mobile
 			if (projetouvert == true) { closeproject("profile-main"); }
-			if (section == "login") { 
-				$("#login").css('z-index', 9);
-				setTimeout(function() { closecontact(); }, 800); 
+			if (section == "login-main") { 
+				$("#login-main").css('z-index', 9);
+				setTimeout(function() { closelogin(); }, 800); 
 			}
 			section = "profile-main";
 			$("#profile-main").css('z-index', 10);
@@ -385,25 +391,25 @@ $(document).ready(function(){
 		}
 	});
 	
-	$(".menulogin, .contactme").click(function(){
+	$(".menulogin").click(function(){
 		if (isOpening == false) {
 			isOpening = true;
 			closenav(); // mobile
-			if (projetouvert == true) { closeproject("login"); }
+			if (projetouvert == true) { closeproject("login-main"); }
 			if (section == "profile-main") { 
 				$("#profile-main").css('z-index', 9);
-				setTimeout(function() { closeabout(); }, 800); 
+				setTimeout(function() { closeprofile(); }, 800); 
 			}
-			section = "login";
-			$("#login").css('z-index', 10);
-			$("body").addClass("login"); 
+			section = "login-main";
+			$("#login-main").css('z-index', 10);
+			$("body").addClass("login-main"); 
 			isScrolling = true;
 			if ($(window).width() >= 960) { $("nav").addClass("navtop"); };
 			$(".menu").removeClass("actif");
 			$(".menulogin").addClass("actif");
 			setTimeout(function() {  
 				$("html, body").animate( { scrollTop: 0 }, 0 ); 
-				$("#login").removeClass("pfix"); 
+				$("#login-main").removeClass("pfix"); 
 				$("#grid, #grid_bg").addClass("enter");
 				}, 500);	
 			setTimeout(function() { 
