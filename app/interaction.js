@@ -418,18 +418,17 @@ $(document).ready(function(){
 	
 });
 
-$(window).load(
-    function() {
-    	if ($(window).width() < 960 ) { hgrid = $("#grid .content").height() + 400; }
-        else { 
-        	if ($(window).width() > 1786) { hgrid = (409*8)*(1786/1440) + 600; }
-        	else { hgrid = (409*8)*($(window).width()/1440) + 600; }
-        }
-        $("#grid").css("height", hgrid);
-    
-	    if ($(window).scrollTop() > $(window).height()) {
-	    	$("nav").addClass("enter");
-	    }
+$(window).on('load', function(){ 
+	if ($(window).width() < 960 ) { hgrid = $("#grid .content").height() + 400; }
+    else { 
+    	if ($(window).width() > 1786) { hgrid = (409*8)*(1786/1440) + 600; }
+    	else { hgrid = (409*8)*($(window).width()/1440) + 600; }
+    }
+    $("#grid").css("height", hgrid);
 
-    });
+    if ($(window).scrollTop() > $(window).height()) {
+    	$("nav").addClass("enter");
+    }
+
+});
 
