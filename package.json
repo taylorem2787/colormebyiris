@@ -1,5 +1,5 @@
 {
-  "name": "photographyrater",
+  "name": "colormebyiris",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/afhaque/colormebyiris.git"
+    "url": "git+https://github.com/taylorem2787/colormebyiris.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/afhaque/colormebyiris/issues"
+    "url": "https://github.com/taylorem2787/colormebyiris/issues"
   },
-  "homepage": "https://github.com/afhaque/colormebyiris#readme"
+  "homepage": "https://github.com/taylorem2787/colormebyiris#readme"
 }
