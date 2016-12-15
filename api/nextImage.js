@@ -24,7 +24,7 @@ var nextImage = function(photoID, userVariance) {
 			resolve({
 				red: data[0].red,
 				blue: data[0].blue,
-				green: data[0].green,
+				green: data[0].green
 				// bw: data[0].bw
 			});
 
@@ -36,14 +36,14 @@ var nextImage = function(photoID, userVariance) {
 		const minimums = {
 			red: colorFloor(results.red - variance),
 			green: colorFloor(results.green - variance),
-			blue: colorFloor(results.blue - variance),
+			blue: colorFloor(results.blue - variance)
 			// bw: colorFloor(results.bw - variance)
 		};
 
 		const maximums = {
 			red: colorCeil(results.red + variance),
 			green: colorCeil(results.green + variance),
-			blue: colorCeil(results.blue + variance),
+			blue: colorCeil(results.blue + variance)
 			// bw: colorCeil(results.bw + variance)
 		};
 
